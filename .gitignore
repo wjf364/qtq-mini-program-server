@@ -1,0 +1,5 @@
+static
+database
+__pycache__
+
+*.pth
