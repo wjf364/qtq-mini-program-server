@@ -30,6 +30,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
     ware_birth=np.load("static/bronze_ware_data/npy/dim_birth.npy")#出土地
     ware_name=np.load("static/bronze_ware_data/npy/dim_name.npy")#器名
     ware_where=np.load("static/bronze_ware_data/npy/dim_where.npy")#出土地
+    ware_chuchu = np.load("static/bronze_ware_data/npy/dim_chuchu.npy")  # 出处
 
     for key, values in age_idx.items():  # 同时便利键值对
         if key == pre_age:
@@ -45,6 +46,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
     min_dis8_birth = []
     min_dis8_name = []
     min_dis8_where = []
+    min_dis8_chuchu=[]
 
     k=0#用来定位path
     for i in dimen2048:
@@ -61,6 +63,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                 min_dis8_birth.append(ware_birth[k])
                 min_dis8_name.append(ware_name[k])
                 min_dis8_where.append(ware_where[k])
+                min_dis8_chuchu.append(ware_chuchu[k])
                 #排序
                 m=len(min_dis8)-1
                 while m > 0:
@@ -89,6 +92,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                         temp = min_dis8_where[m]
                         min_dis8_where[m] = min_dis8_where[m - 1]
                         min_dis8_where[m - 1] = temp
+                        temp = min_dis8_chuchu[m]
+                        min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                        min_dis8_chuchu[m - 1] = temp
                     else:
                         break
                     m = m - 1
@@ -102,6 +108,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                     min_dis8_birth[-1]=ware_birth[k]
                     min_dis8_name[-1]=ware_name[k]
                     min_dis8_where[-1]=ware_where[k]
+                    min_dis8_chuchu[-1] = ware_chuchu[k]
                     #排序
                     m=7
                     while m>0:
@@ -130,6 +137,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                             temp = min_dis8_where[m]
                             min_dis8_where[m] = min_dis8_where[m - 1]
                             min_dis8_where[m - 1] = temp
+                            temp = min_dis8_chuchu[m]
+                            min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                            min_dis8_chuchu[m - 1] = temp
                         else:
                             break
                         m=m-1
@@ -153,6 +163,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                     min_dis8_birth.append(ware_birth[k])
                     min_dis8_name.append(ware_name[k])
                     min_dis8_where.append(ware_where[k])
+                    min_dis8_chuchu.append(ware_chuchu[k])
                     # 排序
                     m = len(min_dis8) - 1
                     while m > 0:
@@ -181,6 +192,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                             temp = min_dis8_where[m]
                             min_dis8_where[m] = min_dis8_where[m - 1]
                             min_dis8_where[m - 1] = temp
+                            temp = min_dis8_chuchu[m]
+                            min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                            min_dis8_chuchu[m - 1] = temp
                         else:
                             break
                         m = m - 1
@@ -194,6 +208,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                         min_dis8_birth[-1] = ware_birth[k]
                         min_dis8_name[-1] = ware_name[k]
                         min_dis8_where[-1] = ware_where[k]
+                        min_dis8_chuchu[-1] = ware_chuchu[k]
                         # 排序
                         m = 7
                         while m > 0:
@@ -222,6 +237,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                                 temp = min_dis8_where[m]
                                 min_dis8_where[m] = min_dis8_where[m - 1]
                                 min_dis8_where[m - 1] = temp
+                                temp = min_dis8_chuchu[m]
+                                min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                                min_dis8_chuchu[m - 1] = temp
                             else:
                                 break
                             m = m - 1
@@ -244,6 +262,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                     min_dis8_birth.append(ware_birth[k])
                     min_dis8_name.append(ware_name[k])
                     min_dis8_where.append(ware_where[k])
+                    min_dis8_chuchu.append(ware_chuchu[k])
                     # 排序
                     m = len(min_dis8) - 1
                     while m > 0:
@@ -272,6 +291,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                             temp = min_dis8_where[m]
                             min_dis8_where[m] = min_dis8_where[m - 1]
                             min_dis8_where[m - 1] = temp
+                            temp = min_dis8_chuchu[m]
+                            min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                            min_dis8_chuchu[m - 1] = temp
                         else:
                             break
                         m = m - 1
@@ -285,6 +307,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                         min_dis8_birth[-1] = ware_birth[k]
                         min_dis8_name[-1] = ware_name[k]
                         min_dis8_where[-1] = ware_where[k]
+                        min_dis8_chuchu[-1] = ware_chuchu[k]
                         # 排序
                         m = 7
                         while m > 0:
@@ -313,6 +336,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                                 temp = min_dis8_where[m]
                                 min_dis8_where[m] = min_dis8_where[m - 1]
                                 min_dis8_where[m - 1] = temp
+                                temp = min_dis8_chuchu[m]
+                                min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                                min_dis8_chuchu[m - 1] = temp
                             else:
                                 break
                             m = m - 1
@@ -335,6 +361,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                     min_dis8_birth.append(ware_birth[k])
                     min_dis8_name.append(ware_name[k])
                     min_dis8_where.append(ware_where[k])
+                    min_dis8_chuchu.append(ware_chuchu[k])
                     # 排序
                     m = len(min_dis8) - 1
                     while m > 0:
@@ -363,6 +390,9 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                             temp = min_dis8_where[m]
                             min_dis8_where[m] = min_dis8_where[m - 1]
                             min_dis8_where[m - 1] = temp
+                            temp = min_dis8_chuchu[m]
+                            min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                            min_dis8_chuchu[m - 1] = temp
                         else:
                             break
                         m = m - 1
@@ -376,6 +406,7 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                         min_dis8_birth[-1] = ware_birth[k]
                         min_dis8_name[-1] = ware_name[k]
                         min_dis8_where[-1] = ware_where[k]
+                        min_dis8_chuchu[-1] = ware_chuchu[k]
                         # 排序
                         m = 7
                         while m > 0:
@@ -404,10 +435,13 @@ def find_similar_pictures(predicted,pre_age,pre_shape):#前面是维度值，中
                                 temp = min_dis8_where[m]
                                 min_dis8_where[m] = min_dis8_where[m - 1]
                                 min_dis8_where[m - 1] = temp
+                                temp = min_dis8_chuchu[m]
+                                min_dis8_chuchu[m] = min_dis8_chuchu[m - 1]
+                                min_dis8_chuchu[m - 1] = temp
                             else:
                                 break
                             m = m - 1
             k = k + 1
     # print(len(min_dis8))
 
-    return min_dis8,min_dis8_path,min_dis8_xml,min_dis8_age,min_dis8_shape,min_dis8_name,min_dis8_birth,min_dis8_where
+    return min_dis8,min_dis8_path,min_dis8_xml,min_dis8_age,min_dis8_shape,min_dis8_name,min_dis8_birth,min_dis8_where,min_dis8_chuchu
