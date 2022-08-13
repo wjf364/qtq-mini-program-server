@@ -106,6 +106,18 @@ def test(image_path,model,model_shape):
 
     "1.计算出最可能的四个年代及每个年代的概率（list_age和list_score）"
     list_score=percent(num4[0].tolist())#四个最大年代的概率
+
+    if list_score[1]/list_score[0]>0.9:
+        tem=1.5*list_score[0]+list_score[1]+0.4*list_score[2]
+        list_score[0]=round(1.5*list_score[0]/tem,2)
+        list_score[1]=round(list_score[1]/tem,2)
+        list_score[2]=round(0.4*list_score[2]/tem,2)
+    else:
+        tem = 4.1 * list_score[0] + list_score[1] + 0.4 * list_score[2]
+        list_score[0] = round(4.1 * list_score[0] / tem,2)
+        list_score[1] = round(list_score[1] / tem,2)
+        list_score[2] = round(0.4 * list_score[2] / tem,2)
+
     list_age=[]#与上述概率对应的年代名称
     for i in range(len(predicted4[0])):
         for key, values in age_idx.items():
@@ -144,9 +156,10 @@ def test(image_path,model,model_shape):
     min8_name_list=[]#代表器名
     min8_birth_list=[]#代表出土地
     min8_where_list=[]#代表现藏地
+    min8_chuchu_list=[]#代表出处
 
     for i in range(len(list_age)):
-        min_dis8, min8_path,min8_xml, min8_age, min8_shape, min8_name, min8_birth, min8_where = model_find_similar_pictures.find_similar_pictures(outputs, list_age[i], key)
+        min_dis8, min8_path,min8_xml, min8_age, min8_shape, min8_name, min8_birth, min8_where,min8_chuchu = model_find_similar_pictures.find_similar_pictures(outputs, list_age[i], key)
         min_dis8_list.append(min_dis8)
         min8_path_list.append(min8_path)
         min8_xml_list.append(min8_xml)
@@ -155,6 +168,7 @@ def test(image_path,model,model_shape):
         min8_name_list.append(min8_name)
         min8_birth_list.append(min8_birth)
         min8_where_list.append(min8_where)
+        min8_chuchu_list.append(min8_chuchu)
         break
     "举例，min8_path_list[0][0]代表概率最大的年代（list_age[0]、list_score[0]）推荐的第一张图片的路径，min8_path_list[2][5]代表概率第三大的年代（list_age[3]、list_score[3]）推荐的第六张图片的路径，"
     "min8_age_list/min8_shape_list/min8_name_list/min8_birth_list/min8_where_list代表这张图片可以显示出来的信息，[0][0]代表概率最大的年代推荐的第一张图片的各种信息"
@@ -192,6 +206,7 @@ def test(image_path,model,model_shape):
             "rec_name" : min8_name,
             "rec_bth" : min8_birth_list[0],
             "rec_place" : min8_where_list[0],
+            "rec_chuchu" : min8_chuchu_list[0],
             "anno_box" : list_all_pos,
             "anno_name" : list_name, 
             "bbox" : boxes,
