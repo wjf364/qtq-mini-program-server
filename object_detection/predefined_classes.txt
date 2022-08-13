@@ -1,0 +1,104 @@
+#纹饰
+sdfw	獸面紋帶 分尾
+sdlq	獸面紋帶 列旗脊/雲雷紋
+sdsb	獸面紋帶 省變
+sdst	獸面紋帶 雙體軀幹
+sd`	獸面紋帶 其他或看不清的
+sws	獸面紋 尾上卷
+swx	獸面紋 尾下卷
+sdt	獸面紋 獨體
+sfj	獸面紋 分解
+sh	獸面紋 有火紋
+s`	獸面紋 其他
+ssz	足部獸首
+drz	夔龍紋 直身
+drd	夔龍紋 低頭卷尾
+drq	夔龍紋 曲身拱背
+drjb	夔龍紋 卷鼻
+drqq	夔龍紋 捲曲
+drj	交龍紋
+drds	龍紋 單首雙身
+drjd	卷龍紋
+tdzs	顧龍紋 折身
+td`	顧龍紋 其他（斜身、拱背、雙首）
+tdft	顧龍紋 分體
+pc	蟠螭紋
+ph	蟠虺紋
+sc	散螭紋
+vb	直立鳥紋
+sb	小鳥紋
+tsb	回首的小鳥紋
+bchw	長尾鳥紋
+bcw	分離C形尾長鳥紋
+bsw	分離S形尾長鳥紋
+bb	大鳥紋（昂首）
+tbb	大鳥紋（回首）
+sbd	鳥首龍身紋
+tsbd	鳥首龍身紋（回首）
+db	龍首鳥身
+snakes	蛇紋
+tiger	虎紋
+fish	魚紋
+vc	蟬紋
+sc	連續的蟬紋
+cz	蟬紋（足）
+elephants	象紋
+crescents	四瓣目紋
+ead	斜角目紋
+eas	目雲紋
+ch	重環紋
+scales	鱗紋
+qqfl	分離的分解獸面竊曲紋
+qqsb	有省變的分解獸面紋
+qqkl	夔龍紋演變的竊曲紋
+qqs	S形竊曲紋
+qqu	U形竊曲紋
+qqg	G形竊曲紋
+qq`	其他竊曲紋
+s	普通雲雷紋
+t	勾連雷紋
+rd	乳釘雷紋
+xjy	斜角雲紋
+lg	菱格雷紋
+wc	圓渦紋
+rd	乳釘紋
+sj	三角紋
+jy	蕉葉紋
+zl	直棱紋
+scb	圓圈紋
+shan	山紋
+xw	弦紋
+sw	繩紋
+wa	瓦紋
+qqw	其他紋飾
+
+#耳
+ve	立耳
+ve1	立耳（外撇）
+be	附耳
+be1	附耳（彎曲）
+be2	附耳（S形）
+ce	环耳
+
+#足
+bzk	夔龍形扁足
+bzn	鳥形扁足
+zhz	錐足
+zz	柱足
+zzx	柱足（上粗下细）
+tz	蹄足
+tzdc	蹄足（短粗）
+tzwc	蹄足（外侈）
+tzxc	蹄足（细长）
+
+#其它（考古学生说，扉棱的个数不多，其余的对于断代意义不大，所以这部分数据重要性比较低）
+tp	托盘
+zmc	门窗型炉灶
+z1	普通炉灶	
+g	蓋
+qcn	曲尺紐
+shn	三环钮
+f	平直扉棱
+ff	F形扉棱
+f`	其他扉棱
+

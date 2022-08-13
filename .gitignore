@@ -1,5 +1,6 @@
 static
 database
 __pycache__
+bronze_ware_data
 
 *.pth
