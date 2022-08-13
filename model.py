@@ -31,7 +31,7 @@ validation_preprocessing = transforms.Compose([
     transforms.ToTensor(),
     normalize,
 ])
-
+#sss
 age_idx = {'商代早期': 0,
            '商代晚期': 1,
            '西周早期': 2,
